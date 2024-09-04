@@ -1,0 +1,84 @@
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table, td, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td, td {
+  padding: 5px;
+  text-align: center;
+}
+
+.border-wide {
+  border-width: 5px;
+}
+.bg-green {
+  background: green;
+}
+.bg-red {
+  background: red;
+}
+.bg-yellow {
+ background: yellow;
+}
+
+.ul-dash {
+  list-style: none;
+}
+
+.ul-dash li:before {
+  content: "-";
+  position: relative;
+  left: -5px;
+}
+.impact {
+  font-family: Impact, fantasy;
+}
+.text-one {
+  text-decoration: underline;
+  color: rgb(144, 15, 129);
+  font-style: italic;
+}
+.text-two {
+  font-weight: 900;
+  font-size: 7px;
+}
+.text-four {
+  font-stretch: condensed;
+  color: rgb(255, 179, 0);
+}
+.text-three {
+  font-size: 12px;
+  color: red;
+  font-stretch: wider;
+}
+.image-style {
+  height: 250px;
+  width: 250px;
+}
