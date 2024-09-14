@@ -26,13 +26,16 @@ body {
   align-items: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 table, td, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
 td, td {
   padding: 5px;
-  text-align: center;
 }
 
 .border-wide {
@@ -50,6 +53,12 @@ td, td {
 
 .ul-dash {
   list-style: none;
+}
+
+.text_picture {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .ul-dash li:before {
