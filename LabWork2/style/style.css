@@ -1,0 +1,140 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100vh;
+}
+
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+.text-container {
+    background-image: url("/LabWork2/recources/kats.png");
+    background-size: 100%;
+    justify-items: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+.paragraph-1 {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #21ad73;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(143, 9, 9, 0.3);
+}
+
+.paragraph-2 {
+    font-family: Times New Roman, serif;
+    font-size: 16px;
+    color: #3442be;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -0.5px -0.5px 1px rgba(24, 39, 168, 0.2);
+}
+
+.paragraph-3 {
+    font-family: Courier, monospace;
+    font-size: 22px;
+    font-weight: 900;
+    color: #af1495;
+    font-weight: 500px;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2), 0.5px 0.5px 1px rgba(209, 223, 21, 0.1);
+}
+
+.heading {
+    font-family: 'Times New Roman', serif;
+    font-size: 250%;
+    color: #a00707;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(212, 19, 19, 0.3);
+}
+
+.image-container {
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    height: 400px;
+}
+
+.fridge {
+    position: relative;
+    right: -200px;
+    width: 300px;
+    height: 300px;
+}
+
+.cat-image {
+    position: relative;
+    bottom: 70px;
+    right: 70px;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+}
+
+.taburet {
+    position: relative;
+    top: 50px;
+    right: 260px;
+    width: 200px;
+    height: 150px;
+}
+
+.image-move {
+    width: 250px;
+    height: 200px;
+    background-image: none;
+    animation: move-and-change 6s infinite;
+}
+
+.cat-image {
+    animation: jump 0.5s infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move-and-change {
+    0% {
+        transform: translateX(-100%) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(20%) translateY(50%) rotate(-240deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateX(40%) translateY(60%) rotate(240deg);
+        opacity: 0.8;
+    }
+
+    75% {
+        transform: translateX(100%) translateY(-110%) rotate(-860deg);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
