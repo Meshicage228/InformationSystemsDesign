@@ -51,6 +51,12 @@ td, td {
   align-items: center;
 }
 
+.ul-skobka li::before {
+  content: ")";
+  position: relative;
+  left: -9px;
+}
+
 .ul-dash li:before {
   content: "-";
   position: relative;
