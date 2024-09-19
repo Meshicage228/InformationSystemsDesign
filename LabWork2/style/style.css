@@ -30,14 +30,14 @@ th {
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: #21ad73;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(143, 9, 9, 0.3);
+    text-shadow: 2px -20px 4px rgba(0, 0, 0, 0.5);
 }
 
 .paragraph-2 {
     font-family: Times New Roman, serif;
     font-size: 16px;
     color: #3442be;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), -0.5px -0.5px 1px rgba(24, 39, 168, 0.2);
+    text-shadow: 5px 10px 2px rgba(148, 29, 29, 0.3);
 }
 
 .paragraph-3 {
@@ -46,7 +46,7 @@ th {
     font-weight: 900;
     color: #af1495;
     font-weight: 500px;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2), 0.5px 0.5px 1px rgba(209, 223, 21, 0.1);
+    text-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 .heading {
@@ -121,12 +121,12 @@ th {
     }
 
     25% {
-        transform: translateX(20%) translateY(50%) rotate(-240deg);
+        transform: translateX(300%) translateY(50%) rotate(-240deg);
         opacity: 0.6;
     }
 
     50% {
-        transform: translateX(40%) translateY(60%) rotate(240deg);
+        transform: translateX(500%) translateY(60%) rotate(240deg);
         opacity: 0.8;
     }
 
