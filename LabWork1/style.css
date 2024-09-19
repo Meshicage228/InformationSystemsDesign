@@ -16,16 +16,6 @@ dd {
   margin: 0;
 }
 
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .text-center {
   text-align: center;
 }
