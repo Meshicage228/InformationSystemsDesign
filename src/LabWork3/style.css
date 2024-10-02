@@ -1,0 +1,100 @@
+/* Font styles for paragraphs */
+p {
+	font-family: 'Pacifico', cursive;
+	color: #3498db;
+}
+
+#para1 {
+	font-size: 24px;
+}
+
+#para2 {
+	font-size: 20px;
+}
+
+#para3 {
+	font-size: 18px;
+}
+
+#para4 {
+	font-size: 16px;
+}
+
+#para5 {
+	font-size: 14px;
+}
+
+/* Styles for list items */
+#list li {
+	font-family: 'Montserrat', sans-serif;
+	color: #f1c40f;
+}
+
+/* Styles for buttons */
+button {
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+	background-color: #2ecc71;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.after-content {
+	font-size: 14px;
+	color: #666;
+	margin-left: 5px;
+}
+
+button:hover {
+	background-color: #1abc9c;
+}
+
+/* Styles for text fields */
+input[type="text"] {
+	font-family: 'Open Sans', sans-serif;
+	color: #666;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+/* Styles for odd and even text fields */
+input[type="text"]:nth-child(odd) {
+	background-color: #f7f7f7;
+}
+
+input[type="text"]:nth-child(even) {
+	background-color: #fff;
+}
+
+/* Styles for first and last list items */
+#list li:first-child {
+	color: #e74c3c;
+}
+
+#list li:last-child {
+	color: #9b59b6;
+}
+
+/* Styles for button 1 click effect */
+#btn1:active ~ input[type="text"]:nth-child(odd) {
+	background-color: #ccc;
+}
+
+#btn1:active ~ input[type="text"]:nth-child(even) {
+	opacity: 0;
+}
+
+/* Styles for button 2 click effect */
+#btn2:active ~ #list li:first-child {
+	visibility: hidden;
+}
+
+#btn2:active ~ #list li:last-child {
+	visibility: hidden;
+}
+
+#btn2:active ~ p {
+	color: #666;
+	font-style: italic;
+}
