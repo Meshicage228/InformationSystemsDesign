@@ -1,67 +1,56 @@
-/* Font styles for paragraphs */
 p {
     font-family: 'Great Vibes', cursive;
     color: #00698f;
-  }
-  
-  /* Font styles for list items */
-  ul li {
+}
+
+ul li {
     font-family: 'Pacifico', cursive;
     color: #8b9467;
-  }
-  
-  /* Font styles for text fields */
-  input[type="text"] {
+}
+
+input[type="text"] {
     font-family: 'Montserrat', sans-serif;
     color: #333;
-  }
-  
-  /* Styles for button 1 */
-  #btn1 {
+}
+
+#btn1 {
     font-family: 'Lato', sans-serif;
     color: #fff;
     background-color: #4CAF50;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-  }
-  
-  /* Styles for button 2 */
-  #btn2 {
+}
+
+#btn2 {
     font-family: 'Raleway', sans-serif;
     color: #fff;
     background-color: #2196F3;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-  }
-  
-  /* #btn1:active ~ input[type="text"]:nth-child(odd) {
+}
+
+#btn1:active~input[type="text"]:nth-child(odd) {
     padding-right: 20px;
-  }
-  
-  #btn1:active ~ input[type="text"]:nth-child(odd):after {
+}
+
+#btn1:active~input[type="text"]:nth-child(odd):after {
     content: " Добавленный текст";
     color: #666;
-  } */
-  
-  /* #btn1:active ~ input[type="text"]:nth-child(even) {
-    display: none;
-  } */
+}
 
-  :target ~ #field1, :target ~ #field3, :target ~ #field5 {
-    opacity: 0;
-    transition: opacity 0.5s; /* adjust the transition duration as needed */
-  }
-  
-  /* Styles for list items on button 2 click */
-  #btn2:active ~ #list li:first-child, #btn2:active ~ #list li:last-child {
+#btn1:active~input[type="text"]:nth-child(even) {
     display: none;
-  }
-  
-  /* Styles for paragraphs on button 2 click */
-  #btn2:active ~ p {
+}
+
+#btn2:active~#list li:first-child,
+#btn2:active~#list li:last-child {
+    display: none;
+}
+
+#btn2:active~p {
     font-family: 'Playfair Display', serif;
     color: #ff69b4;
     font-size: 18px;
-  }
+}
