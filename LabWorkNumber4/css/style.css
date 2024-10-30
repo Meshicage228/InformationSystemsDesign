@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Занимает всю высоту экрана */
+}
+
+.top-center {
+    width: 80%; /* Ширина контейнера */
+}
+
+.top {
+    display: flex; /* Используем Flexbox для расположения div11 и div2 */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    margin-bottom: 0; /* Убираем отступ между верхними и нижними блоками */
+}
+
+.div11 {
+    background-color: #ffffff;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    text-align: center;
+    width: 22%; /* Ширина блоков, чтобы они помещались в одном ряду */
+}
+
+.div2 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 40%; /* Ширина блоков, чтобы они помещались в одном ряду */
+}
+
+.div3 {
+    width: calc(100% - 20px); /* Устанавливаем ширину div3 равной ширине двух верхних блоков */
+    margin-top: 0; /* Убираем отступ сверху для div3 */
+    background-color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin-top: 20px; /* Отступ сверху для таблицы */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Границы ячеек */
+    padding: 8px; /* Отступы внутри ячеек */
+    text-align: left; /* Выравнивание текста */
+}
+
+th {
+    background-color: #f2f2f2; /* Фон заголовков */
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0; /* Цвет фона при наведении на строку */
+}
+
+.div3 p{
+
+    justify-content: center;
+}
+
+.styled-text {
+    text-align: center;
+}
+
+.first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #8A2BE2;
+    margin-right: 5px;
+}
+
+.styled-text::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #8A2BE2;
+    float: left;
+    margin-right: 5px;
+}
+
+/* Insert a logo after the paragraph text */
+.styled-text::after {
+    content: url('logo.png');
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}

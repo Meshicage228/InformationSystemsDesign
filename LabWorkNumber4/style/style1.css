@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+.wrapper {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.div1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+    z-index: -2;
+}
+
+.div2 {
+    border-left: 5px solid rgba(0, 0, 0, 0.2);
+    border-top: 5px solid rgba(0, 0, 0, 0.2);
+    border-right: 5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 0 0;
+    width: 40%;
+    height: 80px;
+    margin-bottom: -4.98px;
+    text-align: center;
+    padding-top: 20px;
+    z-index: 3;
+    box-shadow:  -5px -5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.div2 a {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.div3 {
+    border-left: 5px solid rgba(0, 0, 0, 0.2);
+    border-right: 5px solid rgba(0, 0, 0, 0.2);
+    border-top: 5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0 10px 0 0;
+    width: 100%;
+    height: 65%;
+    z-index: 2;
+    box-shadow:  0 0 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.div2, .div3 {
+    background: radial-gradient(circle at 50% 50%, yellow, green);
+    background-attachment: fixed;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding-top: 3%;
+    row-gap: 5px; 
+    padding-left: 5%;
+    padding-right: 5%;
+    grid-template-columns: repeat(2, minmax(100px, 1fr)); 
+    grid-template-rows: 30px 30px 4fr 1fr;
+}
+
+.text-input {
+    width: 40%;
+    height: 40px;
+    align-self: center;
+    grid-column: 1 / 3; 
+    margin: 0 auto;
+    font-size: 16px;
+    color: black;
+    border: 2px solid white;
+}
+.text-input:focus {
+    color: blue;
+    font-family: 'Times New Roman', serif;
+}
+
+.menu {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+article {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+article > .banana::selection {
+    color: red;
+    background-color: yellow;
+}
+
+.banana {
+    font-size: x-large;
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.img-wrap {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    object-fit: contain; 
+    width: 80%;
+}
+
+.img+p:hover {
+    color: red;
+}
+
+.foot {
+    width: 95%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+footer {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    max-height: 20%;
+    background-color: yellow;
+    padding: 10px 0; 
+    position: relative; 
+    bottom: 0; 
+    border-radius: 0 0 15px 15px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.2); 
+    border-left: 5px solid rgba(0, 0, 0, 0.2);
+    border-right: 5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 3;
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper {
+        width: 80%;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex; /* Используем Flexbox для расположения div1 и wrapper */
+    flex-direction: column; /* Вертикальная ориентация */
+}
+
+.div1 {
+    height: 100px; /* Примерная высота div1 */
+    background-color: #f0f0f0; /* Цвет фона для div1 */
+}
+
+.wrapper {
+    display: flex; /* Используем Flexbox для расположения div2 и div3 */
+    flex-direction: column; /* Вертикальная ориентация */
+    flex-grow: 1; /* Позволяет wrapper занимать оставшееся пространство */
+}
+
+.div2 {
+    background-color: #e0e0e0; /* Цвет фона для div2 */
+    padding: 10px;
+    text-align: center;
+}
+
+.div3 {
+    background-color: #ffffff; /* Цвет фона для div3 */
+    padding: 20px;
+}
+
+footer {
+    display: flex; /* Используем Flexbox для размещения изображения в футере */
+    justify-content: center; /* Центрируем изображение */
+    padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+.foot {
+    width: 100%; /* Ширина изображения в футере */
+    max-width: 600px; /* Максимальная ширина изображения */
+}
+
+.img-wrap {
+    margin: 10px 0; /* Отступы для изображений */
+}
+
+.text-input {
+    margin-top: 20px; /* Отступ сверху для текстового поля */
+    width: 100%; /* Ширина текстового поля */
+}
