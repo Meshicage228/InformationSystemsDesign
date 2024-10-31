@@ -10,11 +10,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh; /* Занимает всю высоту экрана */
+    height: 100vh;
 }
 
 .top-center {
-    width: 80%; /* Ширина контейнера */
+    width: 80%;
 }
 
 .div11 {
@@ -85,19 +85,19 @@ body {
 
 
 table {
-    width: 100%; /* Ширина таблицы */
-    border-collapse: collapse; /* Убираем двойные границы */
-    margin-top: 20px; /* Отступ сверху для таблицы */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 th, td {
-    border: 1px solid #ccc; /* Рамка для ячеек */
-    padding: 10px; /* Отступ в ячейках */
-    text-align: center; /* Центрируем текст */
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
 }
 
 th {
-    background-color: #f2f2f2; /* Фон для заголовков таблицы */
+    background-color: #f2f2f2;
 }
 
 .all-elements {
