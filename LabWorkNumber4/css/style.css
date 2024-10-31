@@ -10,17 +10,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh; /* Занимает всю высоту экрана */
+    height: 100vh;
 }
 
 .top-center {
-    width: 80%; /* Ширина контейнера */
+    width: 80%;
 }
 
 .top {
-    display: flex; /* Используем Flexbox для расположения div11 и div2 */
-    justify-content: space-between; /* Распределяем пространство между элементами */
-    margin-bottom: 0; /* Убираем отступ между верхними и нижними блоками */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
 }
 
 .div11 {
@@ -28,20 +28,27 @@ body {
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
     text-align: center;
-    width: 22%; /* Ширина блоков, чтобы они помещались в одном ряду */
+    width: 22%;
 }
 
 .div2 {
+    position: relative;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
-    width: 40%; /* Ширина блоков, чтобы они помещались в одном ряду */
+    width: 67%;
+}
+
+.div2 img {
+    /* position: absolute; */
+    width: 100%;
+    height: 100px;
 }
 
 .div3 {
-    width: calc(100% - 20px); /* Устанавливаем ширину div3 равной ширине двух верхних блоков */
-    margin-top: 0; /* Убираем отступ сверху для div3 */
+    width: calc(100% - 20px);
+    margin-top: 0;
     background-color: #ffffff;
     border-radius: 0px 0px 10px 10px;
     padding: 20px;
@@ -49,23 +56,23 @@ body {
 }
 
 table {
-    width: 100%; /* Ширина таблицы */
-    border-collapse: collapse; /* Убираем двойные границы */
-    margin-top: 20px; /* Отступ сверху для таблицы */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 th, td {
-    border: 1px solid #ddd; /* Границы ячеек */
-    padding: 8px; /* Отступы внутри ячеек */
-    text-align: left; /* Выравнивание текста */
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 th {
-    background-color: #f2f2f2; /* Фон заголовков */
+    background-color: #f2f2f2;
 }
 
 tbody tr:hover {
-    background-color: #e0e0e0; /* Цвет фона при наведении на строку */
+    background-color: #e0e0e0; 
 }
 
 .div3 p{
@@ -88,15 +95,5 @@ tbody tr:hover {
     font-size: 200%;
     font-weight: bold;
     color: #8A2BE2;
-    float: left;
     margin-right: 5px;
-}
-
-/* Insert a logo after the paragraph text */
-.styled-text::after {
-    content: url('logo.png');
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
 }
