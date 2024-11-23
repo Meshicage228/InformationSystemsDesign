@@ -54,9 +54,10 @@ function updateActiveModalsCount() {
     document.getElementById("activeModalsCount").textContent = `Активные модальные окна: ${count}`;
 }
 
-function updateModal(id, newContent) {
-    const modalData = modalsMap.get(id);
-    if (modalData) {
+function updateModalContent(id) {
+    const newContent = prompt("Введите новое содержимое:");
+    if (newContent) {
+        const modalData = modalsMap.get(id);
         modalData.content = newContent;
         const modal = document.getElementById(id);
         const contentParagraph = modal.querySelector('p');
@@ -64,38 +65,39 @@ function updateModal(id, newContent) {
     }
 }
 
-function changeModalPosition(id, newX, newY) {
-    const modal = document.getElementById(id);
-    if (modal) {
-        modal.style.left = `${newX}px`;
-        modal.style.top = `${newY}px`;
-        const modalData = modalsMap.get(id);
-        if (modalData) {
-            modalData.x = newX;
-            modalData.y = newY;
-        }
-    }
-}
-
-const updateModalContent = (id) => {
-    const newContent = prompt("Введите новое содержимое:");
-    if (newContent) {
-        updateModal(id, newContent);
-    }
-};
-
-const changeModalCoordinates = (id) => {
+function changeModalPosition(id) {
     const newX = parseInt(prompt("Введите новую координату X:"));
     const newY = parseInt(prompt("Введите новую координату Y:"));
     if (!isNaN(newX) && !isNaN(newY)) {
-        changeModalPosition(id, newX, newY);
+        const modal = document.getElementById(id);
+        modal.style.left = `${newX}px`;
+        modal.style.top = `${newY}px`;
+        const modalData = modalsMap.get(id);
+        modalData.x = newX;
+        modalData.y = newY;
     }
-};
+}
+
+function updateModalTitle(id) {
+    const newTitle = prompt("Введите новый заголовок:");
+    if (newTitle) {
+        const modal = document.getElementById(id);
+        const header = modal.querySelector('.modal-header');
+        header.textContent = newTitle;
+        const modalData = modalsMap.get(id);
+        modalData.title = newTitle;
+    }
+}
 
 document.getElementById("modalsContainer").addEventListener("click", (event) => {
     if (event.target.classList.contains("modal-header")) {
         const modalId = event.target.parentElement.id;
-        updateModalContent(modalId);
-        changeModalCoordinates(modalId);
+        const updateContentBound = updateModalContent.bind(null, modalId);
+        const changeCoordinatesBound = changeModalPosition.bind(null, modalId);
+        const updateTitleBound = updateModalTitle.bind(null, modalId);
+        
+        updateContentBound();
+        changeCoordinatesBound();
+        updateTitleBound();
     }
 });
