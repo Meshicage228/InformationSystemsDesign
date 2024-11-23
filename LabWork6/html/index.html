@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление инструментами</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Управление инструментами</h1>
+        <form id="toolForm">
+            <label for="toolId">ID инструмента:</label>
+            <input type="number" id="toolId" required>
+            <label for="toolName">Название инструмента:</label>
+            <input type="text" id="toolName" required>
+            <label for="ownerName">Имя владельца:</label>
+            <input type="text" id="ownerName" required>
+            <label for="toolNumber">Номер инструмента:</label>
+            <input type="text" id="toolNumber" required>
+            <label for="usageTime">Время использования:</label>
+            <input type="number" id="usageTime" required>
+            <button type="button" onclick="addRecord()">Добавить инструмент</button>
+            <button type="button" onclick="deleteRecord()">Удалить инструмент</button>
+            <button type="button" onclick="loadRecords()">Показать все инструменты</button>
+            <button type="button" onclick="openClientNumberModal()">Добавить номер клиента</button>
+        </form>
+        <table id="toolsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Название инструмента</th>
+                    <th>Имя владельца</th>
+                    <th>Номер инструмента</th>
+                    <th>Время использования</th>
+                    <th>Номер клиента</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="clientModal">
+            <div class="modal-content">
+                <span onclick="closeClientModal()" class="close">&times;</span>
+                <h2>Добавить номер клиента</h2>
+                <label for="recordIdSelect">Выберите ID инструмента:</label>
+                <select id="recordIdSelect"></select>
+                <label for="clientNumber">Номер клиента:</label>
+                <input type="text" id="clientNumber" required>
+                <button type="button" onclick="saveClientNumber()">Сохранить номер клиента</button>
+                <button type="button" onclick="closeClientModal()">Закрыть</button>
+            </div>
+        </div>
+        <label for="timeSelection">Выберите тип времени:</label>
+        <select id="timeSelection">
+            <option value="">--Выберите--</option>
+            <option value="min">Минимальное время</option>
+            <option value="max">Максимальное время</option>
+        </select>
+        <button type="button" onclick="showSelectedUsageTime()">Показать инструмент</button>
+    </div>
+    <script src="../script/script.js"></script>
+</body>
+</html>
