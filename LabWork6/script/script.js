@@ -56,12 +56,15 @@ function addRecord() {
     const transaction = db.transaction(["tools"], "readwrite");
     const store = transaction.objectStore("tools");
 
+    const tool = new Tool(toolName, ownerName, toolNumber, usageTime);
+    tool.toolId = toolId;
+
     const record = {
-        toolId,
-        toolName,
-        ownerName,
-        toolNumber,
-        usageTime,
+        toolId: tool.toolId,
+        toolName: tool.toolName,
+        ownerName: tool.ownerName,
+        toolNumber: tool.toolNumber,
+        usageTime: tool.usageTime,
         phone: "-"
     };
 
