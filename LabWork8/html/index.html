@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамические блоки</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="controls">
+        <h1>Создание динамических блоков</h1>
+        <div class="control-group">
+            <label for="colorSelect">Выберите цвет:</label>
+            <select id="colorSelect"></select>
+        </div>
+        <div class="control-group">
+            <label for="textSelect">Выберите текст:</label>
+            <select id="textSelect"></select>
+        </div>
+        <div class="control-group">
+            <label for="widthInput">Ширина (px):</label>
+            <input type="number" id="widthInput" placeholder="Ширина (px)">
+        </div>
+        <div class="button-group">
+            <button id="addBlockButton">Добавить блок</button>
+            <button id="sortBlocksButton">Сортировать блоки</button>
+        </div>
+    </div>
+    <div id="blocksContainer"></div>
+    <script src="../script/lab.js"></script>
+</body>
+</html>
