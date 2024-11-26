@@ -96,15 +96,19 @@ class DynamicBlock extends Block {
     sortBlocks() {
         const container = document.getElementById('blocksContainer');
         const blocks = Array.from(container.children);
-
-        blocks.sort((a, b) => a.innerText.length - b.innerText.length);
-
+    
+        blocks.sort((a, b) => {
+            const widthA = parseFloat(a.style.width);
+            const widthB = parseFloat(b.style.width);
+            return widthA - widthB;
+        });
+    
         while (container.firstChild) {
             container.removeChild(container.firstChild);
         }
-
+    
         blocks.forEach((block, index) => {
-            block.style.top = (index * 100) + 'px';
+            block.style.top = (index * 100) + 'px'; 
             container.appendChild(block);
         });
     }
