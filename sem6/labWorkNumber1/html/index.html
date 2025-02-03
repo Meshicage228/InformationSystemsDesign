@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекламный ролик</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Рекламный ролик</h1>
+        <div class="controls">
+            <label for="iterations">Количество показов (n):</label>
+            <input type="number" id="iterations" value="3" min="1">
+            <button id="startButton">Запустить показ</button>
+        </div>
+    </div>
+
+    <div id="adModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video controls>
+                <source src="/sem6/labWorkNumber1/static/video/build-adv.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <p>Мы - лучшая строительная компания в городе! Строим будущее вместе с вами!</p>
+        </div>
+    </div>
+
+    <div id="endMessage" class="end-message">
+        <p>Показ рекламного ролика завершен!</p>
+        <div id="showInfo"></div>
+    </div>
+
+    <script src="/sem6/labWorkNumber1/script/main-srcipt.js"></script>
+</body>
+</html>
