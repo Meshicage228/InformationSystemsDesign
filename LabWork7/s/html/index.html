@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание Модальных Окон</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Создание Модальных Окон</h1>
+        <div class="form-group">
+            <label for="modalTitleSelect">Выберите заголовок:</label>
+            <select id="modalTitleSelect">
+                <option value="Заголовок 1">Заголовок 1</option>
+                <option value="Заголовок 2">Заголовок 2</option>
+                <option value="Заголовок 3">Заголовок 3</option>
+                <option value="Заголовок 4">Заголовок 4</option>
+                <option value="Заголовок 5">Заголовок 5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="modalContent">Содержимое:</label>
+            <input type="text" id="modalContent" placeholder="Введите текст">
+        </div>
+
+        <div class="form-group">
+            <label for="modalX">Координата X:</label>
+            <input type="number" id="modalX" placeholder="X" value="100">
+        </div>
+
+        <div class="form-group">
+            <label for="modalY">Координата Y:</label>
+            <input type="number" id="modalY" placeholder="Y" value="100">
+        </div>
+
+        <button id="createModal" class="btn">Создать Модальное Окно</button>
+        <button id="removeAllModals" class="btn">Удалить Все Модальные Окна</button>
+        <div id="activeModalsCount" class="active-modals-count">Активные модальные окна: 0</div>
+    </div>
+
+    <div id="modalsContainer"></div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
