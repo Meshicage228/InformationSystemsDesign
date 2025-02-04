@@ -54,7 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     startButton.addEventListener('click', () => {
-        if (!validateInput()) return;
+        if (!validateInput()) {
+            return;
+        };
 
         currentIteration = 0;
         endMessage.style.display = 'none';
