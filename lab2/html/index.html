@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школьный класс</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="../scripts/script.js" defer></script>
+</head>
+<body>
+    <h1>Информация о школьном классе</h1>
+    <form id="classForm">
+        <label for="classNumber">Номер класса:</label>
+        <input type="text" id="classNumber" name="classNumber" required>
+
+        <label for="studentCount">Количество учащихся:</label>
+        <input type="number" id="studentCount" name="studentCount" required>
+
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="teacherName">ФИО классного руководителя:</label>
+        <input type="text" id="teacherName" name="teacherName" required>
+
+        <button type="button" onclick="addClass()">Ввести данные</button>
+        <button type="button" onclick="clearForm()">Очистить форму</button>
+        <button type="button" onclick="deleteClass()">Удалить запись</button>
+        <button type="button" onclick="showAllClasses()">Показать все данные</button>
+        <button type="button" onclick="showClassById()">Показать элемент по ID</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script id="class-template" type="text/x-handlebars-template">
+        <div class="class-info">
+            <h2>{{classNumber}} класс</h2>
+            <p>Количество учащихся: {{studentCount}}</p>
+            <p>Телефон: {{phone}}</p>
+            <p>Классный руководитель: {{teacherName}}</p>
+            <img src="../resources/images/school.png" alt="Школьное изображение">
+        </div>
+    </script>
+</body>
+</html>
