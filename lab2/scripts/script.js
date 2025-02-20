@@ -10,7 +10,7 @@ class SchoolClass {
 class ClassManager {
     constructor() {
         this.classes = new Map();
-        this.nextId = 1; // Начинаем с 1
+        this.nextId = 1;
     }
 
     addClass(schoolClass) {

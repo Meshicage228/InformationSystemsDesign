@@ -69,7 +69,7 @@ button:hover {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px); /* 3 блока в строке с учетом отступов */
+    width: calc(33.333% - 20px);
     box-sizing: border-box;
 }
 
