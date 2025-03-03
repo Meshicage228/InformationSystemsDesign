@@ -17,6 +17,7 @@ document.getElementById('addLetterForm').addEventListener('submit', async (e) =>
 
         if (response.ok) {
             alert('Письмо успешно добавлено!');
+            clearForm();
         } else {
             alert('Ошибка при добавлении письма');
         }
@@ -24,6 +25,13 @@ document.getElementById('addLetterForm').addEventListener('submit', async (e) =>
         alert('Ошибка сети');
     }
 });
+
+function clearForm() {
+    document.getElementById('sender').value = '';
+    document.getElementById('recipient').value = '';
+    document.getElementById('date').value = '';
+    document.getElementById('isRegistered').checked = false;
+}
 
 document.getElementById('searchLettersForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -38,19 +46,14 @@ document.getElementById('searchLettersForm').addEventListener('submit', async (e
         lettersList.innerHTML = '';
 
         if (data.length > 0) {
-            data.forEach(letter => {
-                const letterCard = document.createElement('div');
-                letterCard.className = 'letter-card';
+            const source = document.getElementById('letter-template').innerHTML;
+            const template = Handlebars.compile(source);
 
-                letterCard.innerHTML = `
-                    <p><strong>Отправитель:</strong> ${letter.sender}</p>
-                    <p><strong>Получатель:</strong> ${letter.recipient}</p>
-                    <p><strong>Дата:</strong> ${new Date(letter.date).toLocaleDateString()}</p>
-                    <p><strong>Тип:</strong> ${letter.isRegistered ? 'Заказное' : 'Обычное'}</p>
-                `;
-
-                lettersList.appendChild(letterCard);
+            Handlebars.registerHelper('formatDate', function(date) {
+                return new Date(date).toLocaleDateString();
             });
+
+            lettersList.innerHTML = template(data);
         } else {
             lettersList.innerHTML = '<p>Писем на эту дату не найдено.</p>';
         }

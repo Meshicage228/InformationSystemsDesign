@@ -75,7 +75,7 @@ button {
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
@@ -102,7 +102,7 @@ button:active {
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid #ddd;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .letter-card:hover {
