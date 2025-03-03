@@ -1,10 +1,15 @@
-const Letter = require('../entity/Letters');
+const Letter = require('../models/Letters');
 
 exports.deleteLetter = async (req, res) => {
+    const { id } = req.params;
+
     try {
-        await Letter.findByIdAndDelete(req.params.id);
-        res.status(200).json({ message: 'Letter deleted' });
+        const deletedLetter = await Letter.findByIdAndDelete(id);
+        if (!deletedLetter) {
+            return res.status(404).send('Письмо не найдено');
+        }
+        res.status(200).send('Письмо успешно удалено');
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(500).send(error);
     }
 };

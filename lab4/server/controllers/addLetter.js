@@ -1,4 +1,4 @@
-const Letter = require('../entity/Letters');
+const Letter = require('../models/Letters');
 
 exports.addLetter = async (req, res) => {
     const newLetter = new Letter(req.body);

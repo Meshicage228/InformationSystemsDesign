@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление письмами</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Управление письмами</h1>
+
+        <form id="addLetterForm">
+            <h2>Добавить письмо</h2>
+            <label for="sender">Отправитель:</label>
+            <input type="text" id="sender" placeholder="Имя отправителя" required>
+            
+            <label for="recipient">Получатель:</label>
+            <input type="text" id="recipient" placeholder="Имя получателя" required>
+            
+            <label for="date">Дата отправки:</label>
+            <input type="date" id="date" required>
+            
+            <label>
+                <input type="checkbox" id="isRegistered"> Заказное письмо
+            </label>
+            
+            <button type="submit">Добавить письмо</button>
+        </form>
+
+        <form id="searchLettersForm">
+            <h2>Поиск писем по дате</h2>
+            <label for="searchDate">Дата:</label>
+            <input type="date" id="searchDate" required>
+            <button type="submit">Найти письма</button>
+        </form>
+
+        <div id="results">
+            <h2>Результаты:</h2>
+            <div id="lettersList" class="letters-list"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
