@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма ввода данных</title>
+    <link rel="stylesheet" href="../css/stryle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Введите данные</h1>
+            <form id="form1" class="form">
+                <input type="text" placeholder="Имя" name="name" required>
+                <input type="text" placeholder="Фамилия" name="surname" required>
+                <input type="text" placeholder="Возраст" name="age" required>
+                <input type="text" placeholder="Город" name="city" required>
+                <input type="text" placeholder="Страна" name="country" required>
+                
+                <select name="gender" required>
+                    <option value="" disabled selected>Выберите пол</option>
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+                
+                <div class="radio-group">
+                    <label><input type="radio" name="status" value="student" required> Студент</label>
+                    <label><input type="radio" name="status" value="worker" required> Работник</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="hobby1" value="sport"> Спорт</label>
+                    <label><input type="checkbox" name="hobby2" value="music"> Музыка</label>
+                </div>
+                
+                <button type="submit">Сохранить данные</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h1>Загруженные данные</h1>
+            <form id="form2" class="form">
+                <input type="text" placeholder="Имя" name="name" disabled>
+                <input type="text" placeholder="Фамилия" name="surname" disabled>
+                <input type="text" placeholder="Возраст" name="age" disabled>
+                <input type="text" placeholder="Город" name="city" disabled>
+                <input type="text" placeholder="Страна" name="country" disabled>
+                
+                <select name="gender" disabled>
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+                
+                <div class="radio-group">
+                    <label><input type="radio" name="status" value="student" disabled> Студент</label>
+                    <label><input type="radio" name="status" value="worker" disabled> Работник</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="hobby1" value="sport" disabled> Спорт</label>
+                    <label><input type="checkbox" name="hobby2" value="music" disabled> Музыка</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <button id="loadData" class="load-button">Загрузить данные</button>
+
+    <script src="../js/logic.js"></script>
+</body>
+</html>
