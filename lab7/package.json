@@ -1,0 +1,15 @@
+{
+  "name": "poetry-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "seed": "cd server && npm run seed",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "private": true
+}

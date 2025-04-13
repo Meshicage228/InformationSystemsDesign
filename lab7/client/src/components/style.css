@@ -1,0 +1,122 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f5f0;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #5a3921 0%, #3a2416 100%);
+  color: #fff8ee;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header-decoration {
+  height: 4px;
+  background: linear-gradient(90deg, #c0a78a, #5a3921, #c0a78a);
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-footer {
+  background: #3a2416;
+  color: #c0a78a;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.app-footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+body {
+  background-color: #f8f4e9;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.poetry-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.poet-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #5a3921;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e0d6c2;
+  padding-bottom: 10px;
+}
+
+.poem-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin: 2rem 0;
+  white-space: pre-line;
+}
+
+.poem-line {
+  display: block;
+  margin: 0.8rem 0;
+  position: relative;
+}
+
+.poem-line:before {
+  content: "❝";
+  color: #c0a78a;
+  position: absolute;
+  left: -30px;
+  top: -5px;
+  font-size: 1.2rem;
+}
+
+.next-poem-btn {
+  background: #5a3921;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.next-poem-btn:hover {
+  background: #3a2416;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
