@@ -7,7 +7,6 @@ export class OSLoader {
         this.loadJsonBtn = document.getElementById('load-json-btn');
         this.loadCompanyBtn = document.getElementById('load-company-btn');
         
-        // Инициализация - скрываем дополнительные блоки
         this.hideAdditionalBlocks();
     }
 
