@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-center {
+    width: 80%;
+}
+
+.div11 {
+    background-color: #030303;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    text-align: left;
+    height: 40px;
+    padding: 10px;
+    justify-content: flex-start;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.triangle {
+    width: 0;
+    height: 9px;
+    right: 746px;
+    top: 155.9px;
+    border-left: 50px solid transparent;
+    border-bottom: 50px solid rgb(255, 255, 255);
+    position: absolute;
+    background-color: #030303;
+}
+
+.div11 p {
+    padding: 0;
+    margin: 0;
+}
+
+.div2 {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    top: 164.5px;
+    right: 131px;
+    height: 20px;
+    width: 40%;
+}
+
+.div3 {
+    width: calc(100% - 20px);
+    margin-top: 0;
+    background-color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    border-left: 5px solid #030303;
+    border-right: 5px solid #030303;
+    border-bottom: 5px solid #030303;
+    padding: 15.5px;
+    text-align: center;
+    border-top: none;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div3 p {
+    padding-bottom: 72px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.all-elements {
+    display: flex;
+    height: 530px;
+    width: 690px;
+
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.diamonds {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    padding-top: 30px;
+}
+
+.diamond {
+    border: 5px solid #1111ee;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(102, 190, 212);
+    transform: rotate(45deg); 
+}
+
+.diamond-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(228, 80, 21);
+   
+}
+
+.diamonds::after {
+    content: "НЕ ЗАБЫТЬ";
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+    color: yellow;
+    animation: blink 1s infinite;
+    text-align: center;
+    transform: translateY(85%);
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
