@@ -87,14 +87,7 @@ body {
   white-space: pre-line;
 }
 
-.poem-line {
-  display: block;
-  margin: 0.8rem 0;
-  position: relative;
-}
-
 .poem-line:before {
-  content: "❝";
   color: #c0a78a;
   position: absolute;
   left: -30px;

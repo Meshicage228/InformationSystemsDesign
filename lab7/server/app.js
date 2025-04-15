@@ -12,8 +12,6 @@ app.use(express.json());
 
 app.use('/api/poems', poemRoutes);
 
-app.use(express.static('../client/build'));
-
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

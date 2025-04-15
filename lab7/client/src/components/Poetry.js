@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 
 const Poetry = () => {
-  const [poems, setPoems] = useState([]);
   const [currentPoem, setCurrentPoem] = useState(null);
   const [showAuthorOnly, setShowAuthorOnly] = useState(true);
 
