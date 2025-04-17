@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    width: 300px;
+    margin: 0;
+}
+
+.text-fields input {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Great Vibes', cursive;
+    color: #00698f;
+}
+
+ul li {
+    font-family: 'Pacifico', cursive;
+    color: #8b9467;
+}
+
+button {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.button1 {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.button2 {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    background-color: #2196F3;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0%;
+}
+
+.text-fields input {
+    transition: all 0.6s ease;
+}
+
+.paragraphs p {
+    transition: all 0.6s ease;
+    text-align: center;
+}
+
+.button1:has(input:checked) ~ .text-fields input:nth-child(odd):after {
+    content: "sagsaags";
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .button1:has(input:checked) ~ .text-fields input:nth-child(even) {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+
+.button2:has(input:checked) ~ .paragraphs p {
+    font-style: italic;
+    color: rgb(218, 63, 36);
+}
+
+.button2:has(input:checked) ~ ul li:nth-child(1),
+.button2:has(input:checked) ~ ul li:nth-child(5) {
+    color: white;
+    transition: 1s;
+}
+
+.button1:hover,
+.button2:hover {
+    color: brown;
+}
