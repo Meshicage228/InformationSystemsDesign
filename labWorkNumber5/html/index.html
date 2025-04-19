@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <h1>Расслабьтесь и увольте кого-нибудь!</h1>
+    <link rel="stylesheet" href="../css/style.css">
+</header>
+
+<div class="container">
+    <nav>
+        <h2>Навигация 1</h2>
+        <a href="#home">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <section>
+        <header>
+            <h2>Вы знаете что делать...</h2>
+        </header>
+        <article>
+            <div class="form-container">
+                <h3>Управление наймом</h3>
+                <label for="itemSelect">Выберите кого уволить:</label>
+                <select id="itemSelect">
+                    <option>Egor</option>
+                    <option>Zhora</option>
+                    <option>Sveta</option>
+                </select>
+                <br>
+                <label for="newItem">Нанять на работу:</label>
+                <input type="text" id="newItem" placeholder="Введите новый элемент">
+                <br>
+                <div class="button-container">
+                    <button class="action-button" onclick="removeItem()">Уволить</button>
+                    <button class="action-button" onclick="addItem()">Нанять</button>
+                    <button class="action-button" onclick="showRemovedItems()">Показать удаленных сотрудников</button>
+                </div>
+            </div>
+            <footer>
+                <p>Кому-то повезло, а кому-то нет XD</p>
+            </footer>
+        </article>
+    </section>
+
+    <nav id="removedItemsNav">
+        <h2>Уволенные сотрудники:</h2>
+        <div id="removedItemsList"></div>
+    </nav>
+</div>
+
+<footer>
+    <p>Хорошего дня!</p>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+
+</html>
